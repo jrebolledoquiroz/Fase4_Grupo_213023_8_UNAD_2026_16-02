@@ -26,7 +26,7 @@ def ejecutar_simulaciones():
     """
     Función principal que ejecuta al menos 10 operaciones simuladas.
     Incluye casos de éxito y de error para demostrar la estabilidad
-    del sistema ante situaciones adversas [2, 6].
+    del sistema ante situaciones adversas.
     """
     
     # Listas internas para gestionar la información sin bases de datos
