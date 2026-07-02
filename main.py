@@ -93,7 +93,7 @@ def ejecutar_simulaciones():
     # OPERACIÓN 6: Reserva exitosa (Uso de polimorfismo)
     # ---------------------------------------------------------
     try:
-        # La clase Reserva integra cliente, servicio y duración [8]
+        # La clase Reserva integra cliente, servicio y duración
         reserva1 = Reserva(cliente1, sala1, horas=3)
         reserva1.procesar_confirmacion() # Implementa lógica de confirmación
         lista_reservas.append(reserva1)
@@ -115,7 +115,7 @@ def ejecutar_simulaciones():
     # OPERACIÓN 8: Cálculo de costo con impuesto (Sobrecarga 2)
     # ---------------------------------------------------------
     try:
-        # Uso de multipledispatch para variante con impuesto [1]
+        # Uso de multipledispatch para variante con impuesto
         costo_total = sala1.calcular_costo(3, 0.19)
         print(f"Op 8: Costo con IVA (19%) calculado: ${costo_total}")
     except Exception as e:
@@ -139,16 +139,16 @@ def ejecutar_simulaciones():
         if not lista_servicios[9]: # Esto causará un IndexError
              pass
     except IndexError as e:
-        # Se usa encadenamiento de excepciones si fuera necesario [7]
+        # Se usa encadenamiento de excepciones si fuera necesario
         print(f"Op 10: Error de sistema manejado - {e}")
         logging.error(f"Intento de acceso fuera de rango: {e}")
     finally:
-        # Bloque que siempre se ejecuta para cerrar procesos [7, 10]
+        # Bloque que siempre se ejecuta para cerrar procesos
         print("--- SIMULACIÓN FINALIZADA ---")
         logging.info("Simulación terminada.")
 
 if __name__ == "__main__":
-    # El uso de try/except/else/finally garantiza que la app no se detenga [10]
+    # El uso de try/except/else/finally garantiza que la app no se detenga
     try:
         ejecutar_simulaciones()
     except Exception as global_e:
